@@ -31,10 +31,8 @@ public:
 			arr[dataCount] = data;	// 리스트의 끝 부분에 데이터 삽입
 			dataCount++;	// 개수 증가
 		}
-		// 저장할 공간이 없다면
-		else {
-
-		}
+		else
+			cout << "저장공간이 부족합니다." << endl;
 	}
 
 	// 리스트의 첫번째 원소 참조
@@ -62,11 +60,13 @@ public:
 
 	// 제거
 	T LRemove() {
+		// 삭제할 위치
+		int rpos = curPos;
 		// 삭제할 데이터 저장
-		T remove_data = arr[curPos];
+		T rdata = arr[rpos];
 
 		// 삭제한 데이터 뒤에 있는 데이터들을 앞으로 이동
-		for (int i = curPos; i < dataCount - 1; i++)
+		for (int i = rpos; i < dataCount - 1; i++)
 			arr[i] = arr[i + 1];
 
 		arr[dataCount - 1] = NULL;
@@ -77,7 +77,7 @@ public:
 		// 참조위치를 이전 위치로 변경
 		curPos--;
 
-		return remove_data;
+		return rdata;
 	}
 
 	// 데이터 수 반환

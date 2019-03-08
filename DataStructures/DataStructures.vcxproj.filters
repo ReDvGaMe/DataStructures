@@ -16,6 +16,12 @@
     <Filter Include="소스 파일\01_List">
       <UniqueIdentifier>{85b02e42-d6bc-4aeb-9d3d-e5fb534950ba}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\01_List\Point">
+      <UniqueIdentifier>{2335e444-0842-48a3-9fe7-4b3ae0f56bee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\02_LinkedList">
+      <UniqueIdentifier>{72e3c506-1562-4fd3-ba87-e4d42940f261}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ArrayList.h">
@@ -24,10 +30,19 @@
     <ClInclude Include="defines.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="Point.h">
+      <Filter>소스 파일\01_List\Point</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ListMain.cpp">
       <Filter>소스 파일\01_List</Filter>
+    </ClCompile>
+    <ClCompile Include="Point.cpp">
+      <Filter>소스 파일\01_List\Point</Filter>
+    </ClCompile>
+    <ClCompile Include="PointMain.cpp">
+      <Filter>소스 파일\01_List\Point</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
