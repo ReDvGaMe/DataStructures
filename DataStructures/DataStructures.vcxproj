@@ -118,6 +118,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="LinkedList.h" />
     <ClInclude Include="ArrayList.h" />
     <ClInclude Include="defines.h" />
     <ClInclude Include="Point.h">
@@ -125,6 +126,8 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="LinkedList.cpp" />
+    <ClCompile Include="LinkedListMain.cpp" />
     <ClCompile Include="ListMain.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>

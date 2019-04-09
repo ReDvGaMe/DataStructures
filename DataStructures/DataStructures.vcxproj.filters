@@ -33,6 +33,9 @@
     <ClInclude Include="Point.h">
       <Filter>소스 파일\01_List\Point</Filter>
     </ClInclude>
+    <ClInclude Include="LinkedList.h">
+      <Filter>소스 파일\02_LinkedList</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ListMain.cpp">
@@ -43,6 +46,12 @@
     </ClCompile>
     <ClCompile Include="PointMain.cpp">
       <Filter>소스 파일\01_List\Point</Filter>
+    </ClCompile>
+    <ClCompile Include="LinkedList.cpp">
+      <Filter>소스 파일\02_LinkedList</Filter>
+    </ClCompile>
+    <ClCompile Include="LinkedListMain.cpp">
+      <Filter>소스 파일\02_LinkedList</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
