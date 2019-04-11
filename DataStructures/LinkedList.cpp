@@ -4,71 +4,123 @@ LinkedList::LinkedList() {
 	head = new Node;
 }
 
+LinkedList::LinkedList(int n, int val) {
+	head = new Node;
+	for (int i = 0; i < n; i++)
+		LPushFront(val);
+}
+
 LinkedList::~LinkedList() {
 	Node* delNode = head;
-	while (delNode == NULL) {
+	while (delNode != NULL) {
 		Node* nextDelNode = delNode->next;
 		delete delNode;
 		delNode = nextDelNode;
 	}
 }
 
-void LinkedList::LInsert(int data) {
+void LinkedList::ToIdx(int idx) {
+	if (LEmpty())
+		return;
+	cur = head;
+	for (int i = 0; i < idx; i++) {
+		before = cur;
+		cur = cur->next;
+	}
+}
+
+void LinkedList::LInsert(int data, int idx) {
 	Node* newNode = new Node;
 	newNode->data = data;
-	if (head->next == NULL) {
-		newNode->next = NULL;
-		before = head;
-	}
-	else
-		newNode->next = cur;
 
+	ToIdx(idx);
+
+	newNode->next = cur;
 	cur = newNode;
 	before->next = cur;
-
-	numOfData++;
 }
 
-bool LinkedList::LFirst(int& data) {
-	if (head->next == NULL)
-		return false;
-	
-	before = head;
-	cur = head->next;
+void LinkedList::LPushFront(int data) {
+	Node* newNode = new Node;
+	newNode->data = data;
 
-	data = cur->data;
-	return true;
+	newNode->next = head;
+	head = newNode;
 }
 
-bool LinkedList::LNext(int& data) {
-	if (cur->next == NULL)
-		return false;
-
-	before = cur;
-	cur = cur->next;
-
-	data = cur->data;
-	return true;
-}
-
-int LinkedList::LRemove() {
-	if (head->next == NULL)
+int LinkedList::LFirst() {
+	if (LEmpty())
 		return NULL;
-	
+
+	return head->data;
+}
+
+Node * LinkedList::LBegin() {
+	if (LEmpty())
+		return NULL;
+
+	return head;
+}
+
+Node * LinkedList::LEnd() {
+	Node* endNode = LBegin();
+	while (endNode->next != NULL)
+		endNode = endNode->next;
+	return endNode;
+}
+
+bool LinkedList::LEmpty() {
+	if (head == NULL)
+		return true;
+	else if (head != NULL)
+		return false;
+}
+
+int LinkedList::LRemove(int idx) {
+	if (LEmpty())
+		return NULL;
+
+	ToIdx(idx);
+
 	Node* delNode = cur;
 	int delData = cur->data;
 
-	before->next = cur->next;
-	cur = before;
+	before->next = delNode->next;
 
 	delete delNode;
 	delNode = NULL;
 
-	numOfData--;
+	return delData;
+}
+
+int LinkedList::LPopFront() {
+	if (LEmpty())
+		return NULL;
+
+	Node* delNode = head;
+	head = head->next;
+
+	int delData = delNode->data;
+
+	delete delNode;
+	delNode = NULL;	
 
 	return delData;
 }
 
 int LinkedList::LCount() {
+	Node* cntNode = LBegin();
+	int numOfData = 0;
+	while (cntNode->next != NULL) {
+		cntNode = cntNode->next;
+		numOfData++;
+	}		
+
 	return numOfData;
+}
+
+int LinkedList::LPeek(int idx) {
+	ToIdx(idx);
+	
+	return cur->data;
 }

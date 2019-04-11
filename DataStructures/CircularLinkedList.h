@@ -8,26 +8,30 @@ public:
 };
 using Node = _node;
 
-class LinkedList {
+class CircularLinkedList {
 public:
-	LinkedList();
-	LinkedList(int n, int val);
-	virtual ~LinkedList();
-
-protected:
-	Node* head = NULL;
+	CircularLinkedList();
+	CircularLinkedList(int n, int val);
+	virtual ~CircularLinkedList();
+private:	
+	Node* tail = NULL;
 	Node* cur = NULL;
 	Node* before = NULL;
+	int numOfData = 0;
 
 	void ToIdx(int idx);
+	
 public:
 	void LInsert(int data, int idx);
 	void LPushFront(int data);
+	void LPushBack(int data);
 	int LFirst();
+	int LLast();
 	Node* LBegin();
 	Node* LEnd();
 	bool LEmpty();
 	int LRemove(int idx);
+	int LPopBack();
 	int LPopFront();
 	int LCount();
 	int LPeek(int idx);
