@@ -22,8 +22,35 @@
     <Filter Include="소스 파일\02_LinkedList">
       <UniqueIdentifier>{72e3c506-1562-4fd3-ba87-e4d42940f261}</UniqueIdentifier>
     </Filter>
-    <Filter Include="소스 파일\03_CircularLinkedList">
-      <UniqueIdentifier>{38054a11-859f-4ce3-bce0-79472d55984c}</UniqueIdentifier>
+    <Filter Include="소스 파일\02_LinkedList\LinkedList">
+      <UniqueIdentifier>{268afed3-e8ae-408e-afe0-2bdb98aecedf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\02_LinkedList\CircularLinkedList">
+      <UniqueIdentifier>{242b2cc2-52b5-40c5-9262-8673cb623f71}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\02_LinkedList\DoublyLinkedList">
+      <UniqueIdentifier>{1970aebd-cdb3-4e66-9975-42d10f3e3cf7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\03_Stack">
+      <UniqueIdentifier>{be6e608b-5a93-4194-8967-b6864e705b95}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\03_Stack\ArrayBaseStack">
+      <UniqueIdentifier>{eaf6045c-d8bb-4f53-a51f-dc45d78753f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\03_Stack\ListBaseStack">
+      <UniqueIdentifier>{938fc34e-430a-48a4-bc3c-2b151b91482f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\04_Queue">
+      <UniqueIdentifier>{9090fd50-ddad-42f5-b64f-4b5523055191}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\04_Queue\ArrayBaseQueue">
+      <UniqueIdentifier>{06fa38c9-b4af-488c-83a0-44f75d931672}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\04_Queue\CircularQueue">
+      <UniqueIdentifier>{826bcfdf-9fe6-469e-9bc1-bd15b5b955a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\04_Queue\ListBaseQueue">
+      <UniqueIdentifier>{7e75aed3-5b54-4db6-81a2-dfe0c20d9f08}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -36,11 +63,29 @@
     <ClInclude Include="Point.h">
       <Filter>소스 파일\01_List\Point</Filter>
     </ClInclude>
-    <ClInclude Include="LinkedList.h">
-      <Filter>소스 파일\02_LinkedList</Filter>
-    </ClInclude>
     <ClInclude Include="CircularLinkedList.h">
-      <Filter>소스 파일\03_CircularLinkedList</Filter>
+      <Filter>소스 파일\02_LinkedList\CircularLinkedList</Filter>
+    </ClInclude>
+    <ClInclude Include="LinkedList.h">
+      <Filter>소스 파일\02_LinkedList\LinkedList</Filter>
+    </ClInclude>
+    <ClInclude Include="DoublyLinkedList.h">
+      <Filter>소스 파일\02_LinkedList\DoublyLinkedList</Filter>
+    </ClInclude>
+    <ClInclude Include="ListBaseStack.h">
+      <Filter>소스 파일\03_Stack\ListBaseStack</Filter>
+    </ClInclude>
+    <ClInclude Include="ArrayBaseQueue.h">
+      <Filter>소스 파일\04_Queue\ArrayBaseQueue</Filter>
+    </ClInclude>
+    <ClInclude Include="ArrayBaseStack.h">
+      <Filter>소스 파일\03_Stack\ArrayBaseStack</Filter>
+    </ClInclude>
+    <ClInclude Include="CircularQueue.h">
+      <Filter>소스 파일\04_Queue\CircularQueue</Filter>
+    </ClInclude>
+    <ClInclude Include="ListBaseQueue.h">
+      <Filter>소스 파일\04_Queue\ListBaseQueue</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -53,17 +98,53 @@
     <ClCompile Include="PointMain.cpp">
       <Filter>소스 파일\01_List\Point</Filter>
     </ClCompile>
-    <ClCompile Include="LinkedList.cpp">
-      <Filter>소스 파일\02_LinkedList</Filter>
-    </ClCompile>
-    <ClCompile Include="LinkedListMain.cpp">
-      <Filter>소스 파일\02_LinkedList</Filter>
-    </ClCompile>
     <ClCompile Include="CircularLinkedList.cpp">
-      <Filter>소스 파일\03_CircularLinkedList</Filter>
+      <Filter>소스 파일\02_LinkedList\CircularLinkedList</Filter>
     </ClCompile>
     <ClCompile Include="CircularLinkedListMain.cpp">
-      <Filter>소스 파일\03_CircularLinkedList</Filter>
+      <Filter>소스 파일\02_LinkedList\CircularLinkedList</Filter>
+    </ClCompile>
+    <ClCompile Include="LinkedList.cpp">
+      <Filter>소스 파일\02_LinkedList\LinkedList</Filter>
+    </ClCompile>
+    <ClCompile Include="LinkedListMain.cpp">
+      <Filter>소스 파일\02_LinkedList\LinkedList</Filter>
+    </ClCompile>
+    <ClCompile Include="DoublyLinkedList.cpp">
+      <Filter>소스 파일\02_LinkedList\DoublyLinkedList</Filter>
+    </ClCompile>
+    <ClCompile Include="DoublyLinkedListMain.cpp">
+      <Filter>소스 파일\02_LinkedList\DoublyLinkedList</Filter>
+    </ClCompile>
+    <ClCompile Include="ListBaseStackMain.cpp">
+      <Filter>소스 파일\03_Stack\ListBaseStack</Filter>
+    </ClCompile>
+    <ClCompile Include="ListBaseStack.cpp">
+      <Filter>소스 파일\03_Stack\ListBaseStack</Filter>
+    </ClCompile>
+    <ClCompile Include="ArrayBaseQueueMain.cpp">
+      <Filter>소스 파일\04_Queue\ArrayBaseQueue</Filter>
+    </ClCompile>
+    <ClCompile Include="ArrayBaseQueue.cpp">
+      <Filter>소스 파일\04_Queue\ArrayBaseQueue</Filter>
+    </ClCompile>
+    <ClCompile Include="ArrayBaseStack.cpp">
+      <Filter>소스 파일\03_Stack\ArrayBaseStack</Filter>
+    </ClCompile>
+    <ClCompile Include="ArrayBaseStackMain.cpp">
+      <Filter>소스 파일\03_Stack\ArrayBaseStack</Filter>
+    </ClCompile>
+    <ClCompile Include="CircularQueueMain.cpp">
+      <Filter>소스 파일\04_Queue\CircularQueue</Filter>
+    </ClCompile>
+    <ClCompile Include="CircularQueue.cpp">
+      <Filter>소스 파일\04_Queue\CircularQueue</Filter>
+    </ClCompile>
+    <ClCompile Include="ListBaseQueueMain.cpp">
+      <Filter>소스 파일\04_Queue\ListBaseQueue</Filter>
+    </ClCompile>
+    <ClCompile Include="ListBaseQueue.cpp">
+      <Filter>소스 파일\04_Queue\ListBaseQueue</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

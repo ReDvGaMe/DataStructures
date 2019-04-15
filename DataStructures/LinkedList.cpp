@@ -1,11 +1,9 @@
 #include "LinkedList.h"
 
 LinkedList::LinkedList() {
-	head = new Node;
 }
 
 LinkedList::LinkedList(int n, int val) {
-	head = new Node;
 	for (int i = 0; i < n; i++)
 		LPushFront(val);
 }

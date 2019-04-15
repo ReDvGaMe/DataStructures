@@ -1,28 +1,28 @@
 #pragma once
 #include "defines.h"
 
-class LinkedList {
+class DoublyLinkedList {
 public:
-	LinkedList();
-	LinkedList(int n, int val);
-	virtual ~LinkedList();
+	DoublyLinkedList();
+	~DoublyLinkedList();
 
-protected:
+private:
 	Node* head = NULL;
+	Node* tail = NULL;
 	Node* cur = NULL;
 	Node* before = NULL;
+	int numOfData = 0;
 
-	void ToIdx(int idx);
 public:
-	void LInsert(int data, int idx);
 	void LPushFront(int data);
-	int LFirst();
+	void LPushBack(int data);
 	Node* LBegin();
 	Node* LEnd();
+	Node * LRBegin();
+	Node * LREnd();
 	bool LEmpty();
-	int LRemove(int idx);
+	int LPopBack();
 	int LPopFront();
 	int LCount();
-	int LPeek(int idx);
 };
 

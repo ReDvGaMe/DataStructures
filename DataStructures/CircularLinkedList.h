@@ -1,13 +1,6 @@
 #pragma once
 #include "defines.h"
 
-struct _node {
-public:
-	int data;
-	_node* next = NULL;
-};
-using Node = _node;
-
 class CircularLinkedList {
 public:
 	CircularLinkedList();
