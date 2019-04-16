@@ -52,6 +52,9 @@
     <Filter Include="소스 파일\04_Queue\ListBaseQueue">
       <UniqueIdentifier>{7e75aed3-5b54-4db6-81a2-dfe0c20d9f08}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\05_BinaryTree">
+      <UniqueIdentifier>{dd85eb60-cd4e-445b-a27e-ad7faa9b9628}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ArrayList.h">
@@ -86,6 +89,9 @@
     </ClInclude>
     <ClInclude Include="ListBaseQueue.h">
       <Filter>소스 파일\04_Queue\ListBaseQueue</Filter>
+    </ClInclude>
+    <ClInclude Include="BinaryTreeNode.h">
+      <Filter>소스 파일\05_BinaryTree</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -145,6 +151,12 @@
     </ClCompile>
     <ClCompile Include="ListBaseQueue.cpp">
       <Filter>소스 파일\04_Queue\ListBaseQueue</Filter>
+    </ClCompile>
+    <ClCompile Include="BinaryTreeMain.cpp">
+      <Filter>소스 파일\05_BinaryTree</Filter>
+    </ClCompile>
+    <ClCompile Include="BinaryTreeNode.cpp">
+      <Filter>소스 파일\05_BinaryTree</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

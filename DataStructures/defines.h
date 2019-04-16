@@ -6,8 +6,15 @@ using Data = int;
 
 struct _node {
 public:
-	int data;
+	Data data;
 	_node* next = NULL;
 	_node* prev = NULL;
 };
 using Node = _node;
+
+struct BTreeNode {
+public:
+	Data data;
+	struct BTreeNode* left;
+	struct BTreeNode* right;
+};
